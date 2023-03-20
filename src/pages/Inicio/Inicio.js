@@ -6,10 +6,10 @@ import { useEffect, useState } from "react";
 
 export default function Inicio() {
 
-    const [videos, setVideos] = useState()
+    const [videos, setVideos] = useState([])
 
     useEffect(() => {
-        fetch('https://my-json-server.typicode.com/ananazario/cinetag/db')
+        fetch('https://my-json-server.typicode.com/ananazario/cinetag/videos')
         .then((data) => data.json())
         .then((api) => setVideos(api))
     }, [])
